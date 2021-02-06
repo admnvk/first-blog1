@@ -1,5 +1,13 @@
 <html>
+<head> <title> Adam's blog </title></head>
 <body>
-<p> hello </p>
+<h1><a href="/"> Adam's Blog</a> </h1>
+{%for post in posts %}
+	<div>
+	<p>published: {{post.published_date}}</p>
+	<h2>{{post.title}}</h2>
+	<p> {{post.text|linebreaksbr}}</p>
+	</div>
+{%endfor%}
 </body>
 </html>
